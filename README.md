@@ -1,4 +1,4 @@
-# 🌐 DNS: Full Resolution Chain, Zone Transfers & DNS over HTTPS
+# DNS: Full Resolution Chain, Zone Transfers & DNS over HTTPS
 
 ![Topic](https://img.shields.io/badge/Topic-DNS_Deep_Dive-blue?style=for-the-badge&logo=cloudflare)
 ![Phase](https://img.shields.io/badge/Phase_1-Networking_Part_5-informational?style=for-the-badge)
@@ -13,7 +13,7 @@ A security-focused deep dive into the **DNS Full Resolution Chain**, all **DNS r
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
 - [What is DNS?](#what-is-dns)
 - [Full DNS Resolution Chain](#full-dns-resolution-chain)
@@ -30,7 +30,7 @@ A security-focused deep dive into the **DNS Full Resolution Chain**, all **DNS r
 
 ---
 
-## 🔤 What is DNS?
+## What is DNS?
 
 **DNS (Domain Name System)** is a translation system. When you type `google.com` in a browser, your computer does not understand that name — it only understands numbers (IP addresses).
 
@@ -49,7 +49,7 @@ Browser connects to: 142.250.180.46:443
 
 ---
 
-## 🔗 Full DNS Resolution Chain
+## Full DNS Resolution Chain
 
 When you type `google.com` and press Enter, here is what happens step by step — all within milliseconds.
 
@@ -107,7 +107,7 @@ sequenceDiagram
 
 ---
 
-## 📄 DNS Record Types
+## DNS Record Types
 
 DNS stores much more than just IP addresses. Every record type is a reconnaissance target.
 
@@ -126,7 +126,7 @@ DNS stores much more than just IP addresses. Every record type is a reconnaissan
 
 ---
 
-## 💻 DNS Practical Part 1
+## DNS Practical Part 1
 
 Run these on your Kali machine. Read every line of output.
 
@@ -188,7 +188,7 @@ dig -x 8.8.8.8
 
 ---
 
-## ⚡ Zone Transfers: AXFR
+## Zone Transfers: AXFR
 
 **Zone transfer** is a DNS mechanism for replication. When an organization runs multiple DNS servers, the primary server replicates its database to secondary servers. This process is called **AXFR**.
 
@@ -221,7 +221,7 @@ graph TD
 
 ---
 
-## 🧪 Zone Transfer Practical
+## Zone Transfer Practical
 
 This practical uses **`zonetransfer.me`** — a deliberately vulnerable domain built specifically for learning AXFR. Zone transfer is intentionally allowed here.
 
@@ -278,7 +278,7 @@ allow-transfer { 192.168.1.2; };
 
 ---
 
-## 🔐 DNS over HTTPS (DoH)
+## DNS over HTTPS (DoH)
 
 **Traditional DNS problem:** DNS queries are sent in **plaintext over UDP port 53**. Anyone who can see your network traffic — your ISP, network admin, or a MITM attacker — can see exactly which domains you are querying.
 
@@ -314,7 +314,7 @@ graph LR
 
 ---
 
-## 💻 DNS Practical Part 2
+## DNS Practical Part 2
 
 ### Query DNS over HTTPS — Cloudflare DoH Endpoint
 
@@ -357,7 +357,7 @@ The IP listed under `nameserver` is the DNS server handling all queries from you
 
 ---
 
-## 🟣 Purple Team: Full Picture
+## Purple Team: Full Picture
 
 Combine DNS recon and detection into one unified workflow.
 
@@ -387,7 +387,7 @@ graph TD
 
 ---
 
-## 💡 Key Takeaways
+## Key Takeaways
 
 > [!IMPORTANT]
 > **DNS is not just a utility — it is an attack surface.** Every hop in the resolution chain is a potential injection point. Every record type is a recon target. Zone transfers are an entire infrastructure map waiting to be downloaded.
@@ -402,7 +402,7 @@ graph TD
 
 ---
 
-## 🔗 Additional Resources
+## Additional Resources
 
 - 📺 **Watch the Tutorial:** [DNS Deep Dive — Full Walkthrough in Urdu/Hindi](https://www.youtube.com/@MuhammadAqibTayyab)
 - 🌐 **Zone Transfer Practice Domain:** [zonetransfer.me](https://zonetransfer.me)
@@ -414,7 +414,7 @@ graph TD
 
 ---
 
-## 🙋‍♂️ Author
+## Author
 
 **Muhammad Aqib Tayyab** — AppSec & Purple Team Student | Certified Ethical Hacker | Bug Bounty Hunter
 
